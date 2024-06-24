@@ -1,15 +1,16 @@
-import Guide from '@/components/Guide';
-import { trim } from '@/utils/format';
 import { PageContainer } from '@ant-design/pro-components';
-import { useModel } from '@umijs/max';
+import { Button } from 'antd';
+import { useState } from 'react';
 import styles from './index.less';
 
-const HomePage: React.FC = () => {
-  const { name } = useModel('global');
+const HomePage = () => {
+  const [count, setCount] = useState(1);
   return (
     <PageContainer ghost>
       <div className={styles.container}>
-        <Guide name={trim(name)} />
+        哈哈我是
+        {count}
+        <Button onClick={() => setCount(count + 10)}>+</Button>
       </div>
     </PageContainer>
   );

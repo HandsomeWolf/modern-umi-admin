@@ -1,9 +1,9 @@
-// 全局共享数据示例
-import { DEFAULT_NAME } from '@/constants';
+// Global state
+import { DEFAULT_WEBSITE_TITLE } from '@/constants';
 import { useState } from 'react';
 
 const useUser = () => {
-  const [name, setName] = useState<string>(DEFAULT_NAME);
+  const [name, setName] = useState<string>(DEFAULT_WEBSITE_TITLE);
   return {
     name,
     setName,
